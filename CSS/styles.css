@@ -1,0 +1,324 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+* {
+    box-sizing: border-box;
+}
+main {
+    padding: 20px;
+    margin-top: 20px; 
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    z-index: 1000;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+/*Div Giao Diện Sản Phẩm */
+.product-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    max-width: 300px;
+    margin: 10px;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-item img {
+    width: 80%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.btn-view {
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-view:hover {
+    background-color: #0056b3;
+    transform: scale(1.1); /* Hiệu ứng phóng to khi di chuột */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+/*button thêm vào giỏ hàng*/
+.btn-add-to-cart {
+    background-color: #28a745; /* Màu nền của nút */
+    color: #ffffff; /* Màu chữ */
+    border: none; /* Xóa viền của nút */
+    padding: 10px 20px; /* Khoảng cách giữa nội dung và viền nút */
+    text-align: center; /* Căn giữa văn bản */
+    text-decoration: none; /* Xóa gạch dưới văn bản */
+    display: inline-block; /* Hiển thị nút trên cùng dòng */
+    font-size: 16px; /* Kích thước chữ */
+    border-radius: 5px; /* Bo tròn các góc của nút */
+    transition: background-color 0.3s, transform 0.3s; /* Hiệu ứng chuyển tiếp */
+}
+/*Button*/
+.btn-view {
+    display: inline-block;
+    background-color: #08cc46;
+    color: #090207;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 30px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 20px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-add-to-cart:hover {
+    background-color: #218838;
+    transform: scale(0.95); /* Hiệu ứng phóng to khi di chuột */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+/* Thêm Nút Xóa  */
+.btn-delete {
+    display: inline-block;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 12px; /* Bo tròn các góc nút */
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 5px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+    transform: scale(1.1); /* Hiệu ứng phóng to khi di chuột */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+/*kiểm tra khoảng cách button */
+.btn-view, .btn-add-to-cart, .btn-delete {
+    margin: 5px; /* Khoảng cách bên ngoài nút */
+}
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+.product-detail {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-description {
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #f4f4f4;
+}
+
+footer a {
+    color: #333;
+    text-decoration: none; 
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+/* CSS cho nút xóa */
+.btn-delete {
+    background-color: #dc3545; /* Màu nền đỏ */
+    color: #ffffff; /* Màu chữ trắng */
+    border: none; /* Xóa viền */
+    padding: 5px 10px; /* Khoảng cách trong nút */
+    font-size: 14px; /* Kích thước chữ */
+    border-radius: 5px; /* Bo tròn các góc */
+    cursor: pointer; /* Con trỏ chuột khi di qua */
+    transition: background-color 0.3s, transform 0.3s; /* Hiệu ứng chuyển tiếp */
+}
+
+.btn-delete:hover {
+    background-color: #c82333; /* Màu nền đỏ đậm khi hover */
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+}
+
+.btn-delete:active {
+    background-color: #bd2130; /* Màu nền đỏ tối khi nhấn */
+    transform: scale(0.95); /* Thu nhỏ nhẹ khi nhấn */
+}
+.btn-logout {
+    background: #f00; /* Màu nền đỏ cho nút logout */
+    color: #fff; /* Màu chữ trắng */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-logout:hover {
+    background: #d00; /* Màu nền đỏ đậm khi hover */
+}
+        
+        /* Con trỏ thay đổi thành hình dạng cụ thể */
+    .button {
+        cursor: pointer; /* Con trỏ hình bàn tay */
+    }
+        /* Gradient nền động */
+        .background {
+            background: linear-gradient(45deg, #ff6b6b, #f7d06d);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+        
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+        /* Hiệu ứng 3D cho phần tử */
+        .card {
+            perspective: 1000px;
+        }
+        
+        .card-inner {
+            position: relative;
+            width: 200px;
+            height: 300px;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+        
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+        
+        .card-back {
+            transform: rotateY(180deg);
+            background: #ff6b6b;
+        }
+        /* Hiệu ứng hoạt hình nền */
+        @keyframes pulse {
+            0% { background-color: #ff6b6b; }
+            50% { background-color: #f7d06d; }
+            100% { background-color: #ff6b6b; }
+        }
+        
+        .pulsing-background {
+            animation: pulse 3s infinite;
+        }
+        
+        
